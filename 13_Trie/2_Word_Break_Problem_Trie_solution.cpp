@@ -44,10 +44,12 @@ public:
 
         for (int end = start + 1; end <= (int)s.length(); end++) {
             if (search(s.substr(start, end - start)) && wordBreakHelper(s, end, memo)) {
-                return memo[start] = 1;
+                memo[start] = 1;
+                return true;
             }
         }
-        return memo[start] = 0;
+        memo[start] = 0;
+        return false;
     }
 
     int wordBreak(int n, string s, vector<string> &dictionary) {
@@ -61,6 +63,8 @@ public:
 int main() {
     Solution sol;
     vector<string> dict = {"i", "like", "sam", "sung", "samsung", "mobile"};
-    cout << "Word break 'ilikesamsung': " << sol.wordBreak(dict.size(), "ilikesamsung", dict) << endl;
+    int res = sol.wordBreak(dict.size(), "ilikesamsung", dict);
+    cout << "Word break 'ilikesamsung': " << res << endl;
+    if (res != 1) return 1;
     return 0;
 }

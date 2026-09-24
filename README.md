@@ -84,18 +84,22 @@ The repository is organized into 16 canonical DSA modules, covering fundamental 
 ## Build and Testing
 
 ### 1. Run Complete Test Suite
-Run the automated test runner across all 390 programs:
+Run the automated test runner across all 390 programs (automatically utilizing multi-core parallelism):
 ```bash
 make test
+# Or with strict -Werror mode:
+make test STRICT=1
 # Or directly via the bash test runner:
-./scripts/compile_and_test.sh
+./scripts/compile_and_test.sh -j 12 --strict
 ```
 
-### 2. Test a Single Module
-You can verify any individual module or group of modules by passing folder names:
+### 2. Test a Single Module or File
+You can verify any individual module or specific source file:
 ```bash
-./scripts/compile_and_test.sh 0_basics
+make test MODULE=0_basics
+# Or directly via the test runner:
 ./scripts/compile_and_test.sh 4_search_sort
+./scripts/compile_and_test.sh 1_array/7_Kadanes_Algorithm.cpp
 ./scripts/compile_and_test.sh 12_graph 14_dynamic_programming
 ```
 

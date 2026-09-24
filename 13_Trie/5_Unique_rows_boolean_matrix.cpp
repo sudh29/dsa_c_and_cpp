@@ -26,6 +26,7 @@ public:
     }
 
     vector<vector<int>> uniqueRow(int row, int col, vector<vector<int>> M) {
+        (void)col;
         TrieNode* root = new TrieNode();
         vector<vector<int>> res;
 
@@ -47,5 +48,6 @@ int main() {
     };
     auto uniq = sol.uniqueRow(3, 4, mat);
     cout << "Unique rows count: " << uniq.size() << endl; // 2
+    if (uniq.size() != 2) return 1;
     return 0;
 }

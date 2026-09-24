@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cassert>
 
 using namespace std;
 
@@ -11,6 +12,7 @@ struct Node {
 class Solution {
 public:
     Node* divide(int N, Node *head) {
+        (void)N;
         Node *evenStart = nullptr, *evenEnd = nullptr;
         Node *oddStart = nullptr, *oddEnd = nullptr;
         Node *cur = head;
@@ -45,7 +47,16 @@ int main() {
     Solution sol;
     head = sol.divide(5, head);
     cout << "Segregated even and odd: ";
-    while (head) { cout << head->data << " "; head = head->next; }
+    Node* cur = head;
+    while (cur) { cout << cur->data << " "; cur = cur->next; }
     cout << endl;
+    assert(head->data == 8 && head->next->data == 2);
+
+    // Free allocated memory
+    while (head) {
+        Node* tmp = head;
+        head = head->next;
+        delete tmp;
+    }
     return 0;
 }

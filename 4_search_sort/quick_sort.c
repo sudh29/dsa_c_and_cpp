@@ -42,15 +42,17 @@ void quick_sort(int *A, int start, int end){
 }
 
      
-int main() {    
-	int temp;
+#include <assert.h>
+
+int main(void) {    
 	int A[] = {5, 222, -6, 7, 2, 1, 0, 3}, n = 8;
         
 	quick_sort(A, 0, 7);    
         
     for(int i = 0; i < n; ++i)    
-      printf("%d ", A[i]);  
+        printf("%d ", A[i]);  
+    printf("\n");
+    assert(A[0] == -6 && A[7] == 222);
     return 0;
-   
 }
 	

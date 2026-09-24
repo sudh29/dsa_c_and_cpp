@@ -13,7 +13,7 @@
 | [8_Buy_Maximum_Stocks_i_stocks_bought_i-th_day.cpp](8_Buy_Maximum_Stocks_i_stocks_bought_i-th_day.cpp) | Buy Maximum Stocks on i-th Day | Greedy / Sorting by Price |
 | [9_Find_minimum_maximum_amount_to_buy_all_N_candies.cpp](9_Find_minimum_maximum_amount_to_buy_all_N_candies.cpp) | Shop in Candy Store | Greedy / Extremum Selection |
 | [11_Minimum_Cost_cut_board_into_squares.cpp](11_Minimum_Cost_cut_board_into_squares.cpp) | Minimum Cost to Cut Board | Greedy / Multi-dimensional Cutting |
-| [12_Check_possible_survive_sland.cpp](12_Check_possible_survive_sland.cpp) | Check Survival on Island | Greedy / Mathematical Simulation |
+| [12_Check_possible_survive_island.cpp](12_Check_possible_survive_island.cpp) | Check Survival on Island | Greedy / Mathematical Simulation |
 | [13_Find_maximum_meetings_one_room.cpp](13_Find_maximum_meetings_one_room.cpp) | Max Meetings in One Room | Greedy / Activity Selection |
 | [14_Maximum_product_subset_array.cpp](14_Maximum_product_subset_array.cpp) | Maximum Product Subset | Greedy / Sign Analysis |
 | [15_Maximize_array_sum_after_K_negations.cpp](15_Maximize_array_sum_after_K_negations.cpp) | Maximize Sum After K Negations | Greedy / Sorting & Min Element Inversion |

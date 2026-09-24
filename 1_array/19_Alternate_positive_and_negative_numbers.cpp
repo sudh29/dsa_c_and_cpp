@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <cassert>
 
 using namespace std;
 
@@ -12,7 +13,8 @@ public:
             else neg.push_back(arr[i]);
         }
 
-        int i = 0, p = 0, q = 0;
+        int i = 0;
+        size_t p = 0, q = 0;
         while (p < pos.size() && q < neg.size()) {
             arr[i++] = pos[p++];
             arr[i++] = neg[q++];
@@ -30,5 +32,6 @@ int main() {
     cout << "Alternating pos/neg: ";
     for (int i = 0; i < n; i++) cout << arr[i] << " ";
     cout << endl;
+    assert(arr[0] == 9 && arr[1] == -2 && arr[2] == 4 && arr[3] == -1);
     return 0;
 }

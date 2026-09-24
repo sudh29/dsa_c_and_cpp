@@ -16,7 +16,7 @@
 | [12_Dijkstra_algo.cpp](12_Dijkstra_algo.cpp) | Dijkstra's Shortest Path Algorithm | Greedy / Min-Priority Queue |
 | [13_Implement_Topological_Sort.cpp](13_Implement_Topological_Sort.cpp) | Topological Sort (Kahn's Algorithm) | In-degree Tracking / BFS |
 | [14_Minimum_time_taken_job_completed_Directed_Acyclic_Graph.cpp](14_Minimum_time_taken_job_completed_Directed_Acyclic_Graph.cpp) | Minimum Time for DAG Jobs | DAG / In-degree Level Traversal |
-| [16_Find_the_no_of_slands.cpp](16_Find_the_no_of_slands.cpp) | Number of Islands (8-Connected) | Connected Components / Grid DFS |
+| [16_Find_the_no_of_islands.cpp](16_Find_the_no_of_islands.cpp) | Number of Islands (8-Connected) | Connected Components / Grid DFS |
 | [18_Implement_Kruskals_Algorithm.cpp](18_Implement_Kruskals_Algorithm.cpp) | Kruskal's Minimum Spanning Tree | Greedy / Disjoint Set Union (DSU) |
 | [36_M-Colouring_Problem.cpp](36_M-Colouring_Problem.cpp) | Graph M-Colouring Problem | Backtracking / Vertex Coloring |
 | [graph_adj_matrix_bfs.cpp](graph_adj_matrix_bfs.cpp) | Adjacency Matrix & BFS | Matrix Representation / Queue |
