@@ -16,17 +16,17 @@
 *.dylib
 *.dll
 
-# Fortran module files
-*.mod
-*.smod
-
 # Compiled Static libraries
 *.lai
 *.la
 *.a
 *.lib
 
-# Executables
+# Executables & Build Outputs
 *.exe
 *.out
 *.app
+build/
+bin/
+*.dSYM/
+.DS_Store
