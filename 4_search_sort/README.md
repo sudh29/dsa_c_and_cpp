@@ -1,6 +1,6 @@
 # 4_Search_Sort: Searching & Sorting Algorithms
 
-Complete implementations of classic sorting algorithms in **C (C11)** and search/sort problem solutions in **C++ (C++20)**.
+Complete implementations of classic sorting algorithms in both **C (C11)** and **C++ (C++20)**, and search/sort problem solutions in **C++ (C++20)**.
 
 ## Sorting Algorithms (Dual C11 & C++20)
 | Algorithm | C (C11) | C++ (C++20) | Time Complexity (Avg / Worst) | Space Complexity |
@@ -44,9 +44,12 @@ Complete implementations of classic sorting algorithms in **C (C11)** and search
 
 ## Compilation
 ```bash
-# Compile a C sorting program
-gcc -std=c11 -Wall -Wextra bubble_sort.c -o bubble && ./bubble
+# Compile a C sorting program (C11)
+gcc -std=c11 -Wall -Wextra -O2 bubble_sort.c -o bubble && ./bubble
 
-# Compile a C++ searching problem
-g++ -std=c++20 -Wall -Wextra 2_Search_in_a_rotated_sorted_array.cpp -o search && ./search
+# Compile a C++ sorting program (C++20)
+g++ -std=c++20 -Wall -Wextra -O2 bubble_sort.cpp -o bubble_cpp && ./bubble_cpp
+
+# Compile a C++ searching problem (C++20)
+g++ -std=c++20 -Wall -Wextra -O2 2_Search_in_a_rotated_sorted_array.cpp -o search && ./search
 ```

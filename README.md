@@ -4,10 +4,11 @@
 [![Language: C++20](https://img.shields.io/badge/Language-C%2B%2B20-darkblue.svg)](https://en.wikipedia.org/wiki/C%2B%2B20)
 [![Compiler: GCC](https://img.shields.io/badge/Compiler-GCC%2011%2B-green.svg)](https://gcc.gnu.org/)
 [![Compiler: Clang](https://img.shields.io/badge/Compiler-Clang%2013%2B-purple.svg)](https://clang.llvm.org/)
-[![Problems: 390](https://img.shields.io/badge/DSA%20Problems-390%20Verified-brightgreen.svg)](#repository-architecture)
+[![Programs: 396](https://img.shields.io/badge/DSA%20Programs-396%20Verified-brightgreen.svg)](#repository-architecture)
+[![Parity: Audited](https://img.shields.io/badge/Language%20Parity-Audited-blue.svg)](#3-check-c--c-language-parity)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-A comprehensive, production-grade repository of **390 Data Structures and Algorithms** implementations written in modern **C (C11 standard)** and **C++ (C++20 standard)**.
+A comprehensive, production-grade repository of **390 Data Structures and Algorithms problems** (featuring **396 verified C11 & C++20 program implementations**).
 
 All legacy Python scripts and tooling have been systematically replaced with pure, self-contained, high-performance C and C++ source files, each featuring non-interactive validation test suites.
 
@@ -19,9 +20,10 @@ All legacy Python scripts and tooling have been systematically replaced with pur
 - [Standards & Best Practices](#standards--best-practices)
 - [Build and Testing](#build-and-testing)
   - [Run Complete Test Suite](#1-run-complete-test-suite)
-  - [Test Specific Module](#2-test-a-single-module)
-  - [Compile Individual Program](#3-compile-an-individual-file)
-  - [Clean Build Artifacts](#4-clean-artifacts)
+  - [Test Specific Module or File](#2-test-a-single-module-or-file)
+  - [Check C / C++ Language Parity](#3-check-c--c-language-parity)
+  - [Compile Individual Program](#4-compile-an-individual-file)
+  - [Clean Build Artifacts](#5-clean-artifacts)
 - [Repository Structure](#repository-structure)
 - [License](#license)
 
@@ -37,7 +39,7 @@ The repository is organized into 16 canonical DSA modules, covering fundamental 
 | `1` | [1_array/](1_array/) | Arrays, Two Pointers, Sliding Window, Prefix Sums, Kadane's | C++20 | 35 | [README](1_array/README.md) |
 | `2` | [2_matrix/](2_matrix/) | 2D Matrices, Rotations, Spiral Traversals, Matrix Search | C++20 | 10 | [README](2_matrix/README.md) |
 | `3` | [3_string/](3_string/) | String Manipulation, Palindromes, KMP, Rabin-Karp, Substrings | C++20 | 35 | [README](3_string/README.md) |
-| `4` | [4_search_sort/](4_search_sort/) | Search & Sort Algorithms (Quick, Merge, Heap, Binary Search) | C11, C++20 | 32 | [README](4_search_sort/README.md) |
+| `4` | [4_search_sort/](4_search_sort/) | Search & Sort Algorithms (Quick, Merge, Heap, Binary Search) | C11, C++20 | 38 (32 problems) | [README](4_search_sort/README.md) |
 | `5` | [5_linklist/](5_linklist/) | Singly, Doubly & Circular Linked Lists, Fast/Slow Pointers | C++20 | 29 | [README](5_linklist/README.md) |
 | `6` | [6_binary_tree/](6_binary_tree/) | Binary Trees, Traversals (Morris, Level-order), LCA, Views | C++20 | 41 | [README](6_binary_tree/README.md) |
 | `7` | [7_bst/](7_bst/) | Binary Search Trees, Balanced Trees, AVL Trees, Conversions | C++20 | 24 | [README](7_bst/README.md) |
@@ -49,7 +51,7 @@ The repository is organized into 16 canonical DSA modules, covering fundamental 
 | `13` | [13_Trie/](13_Trie/) | Prefix Trees, Word Dictionaries, Maximum XOR Pair Search | C++20 | 6 | [README](13_Trie/README.md) |
 | `14` | [14_dynamic_programming/](14_dynamic_programming/) | Dynamic Programming, Knapsack, LCS, LIS, Matrix DP, MCM | C++20 | 50 | [README](14_dynamic_programming/README.md) |
 | `15` | [15_bit_manipulation/](15_bit_manipulation/) | Bit Manipulation, Bitmasks, Power Sets, Bitwise Arithmetic | C++20 | 10 | [README](15_bit_manipulation/README.md) |
-| **Total** | | | | **390** | |
+| **Total** | | | | **396 (390 problems)** | |
 
 ---
 
@@ -103,7 +105,20 @@ make test MODULE=0_basics
 ./scripts/compile_and_test.sh 12_graph 14_dynamic_programming
 ```
 
-### 3. Compile an Individual File
+### 3. Check C / C++ Language Parity
+Audit the dual-language implementation status across all 16 modules:
+```bash
+# View summary parity table:
+make check-parity
+
+# View exact missing filenames per module:
+make check-parity-details
+
+# Or directly via the Python parity script:
+./scripts/check_c_cpp_parity.py --details
+```
+
+### 4. Compile an Individual File
 Compile any individual C or C++ file directly:
 ```bash
 # Pure C implementation (C11):
@@ -115,7 +130,7 @@ g++ -std=c++20 -Wall -Wextra -O2 14_dynamic_programming/13_Longest_Common_Subseq
 ./lcs
 ```
 
-### 4. Clean Artifacts
+### 5. Clean Artifacts
 Remove temporary binaries and build directories:
 ```bash
 make clean
@@ -131,7 +146,7 @@ dsa_c_and_cpp/
 ├── 1_array/                  # Array manipulations & algorithms (35 files)
 ├── 2_matrix/                 # 2D matrix algorithms (10 files)
 ├── 3_string/                 # String algorithms & pattern matching (35 files)
-├── 4_search_sort/            # C sorting algorithms & C++ search/sort (32 files)
+├── 4_search_sort/            # C sorting algorithms & C++ search/sort (38 files)
 ├── 5_linklist/               # Singly, doubly, circular linked lists (29 files)
 ├── 6_binary_tree/            # Binary tree traversals, properties, views (41 files)
 ├── 7_bst/                    # Binary search trees & balanced trees (24 files)
@@ -144,8 +159,9 @@ dsa_c_and_cpp/
 ├── 14_dynamic_programming/   # Tabulation, memoization & DP paradigms (50 files)
 ├── 15_bit_manipulation/      # Bitwise algorithms & bitmasks (10 files)
 ├── scripts/
-│   └── compile_and_test.sh   # Comprehensive test suite runner
-├── Makefile                  # Build automation (test, clean, help)
+│   ├── compile_and_test.sh   # Parallel multi-core test suite runner
+│   └── check_c_cpp_parity.py # C/C++ dual-language parity auditor
+├── Makefile                  # Build automation (test, check-parity, clean, help)
 ├── LICENSE                   # MIT License
 └── README.md                 # Primary repository documentation
 ```
