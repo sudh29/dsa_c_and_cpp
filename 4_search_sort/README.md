@@ -2,15 +2,15 @@
 
 Complete implementations of classic sorting algorithms in **C (C11)** and search/sort problem solutions in **C++ (C++20)**.
 
-## Sorting Algorithms (C11)
-| File | Algorithm | Time Complexity (Avg / Worst) | Space Complexity |
-|------|-----------|-------------------------------|------------------|
-| [bubble_sort.c](bubble_sort.c) | Bubble Sort | $O(n^2)$ / $O(n^2)$ | $O(1)$ |
-| [selection_sort.c](selection_sort.c) | Selection Sort | $O(n^2)$ / $O(n^2)$ | $O(1)$ |
-| [insertion_sort.c](insertion_sort.c) | Insertion Sort | $O(n^2)$ / $O(n^2)$ | $O(1)$ |
-| [merge_sort.c](merge_sort.c) | Merge Sort | $O(n \log n)$ / $O(n \log n)$ | $O(n)$ |
-| [quick_sort.c](quick_sort.c) | Quick Sort | $O(n \log n)$ / $O(n^2)$ | $O(\log n)$ |
-| [heap_sort.c](heap_sort.c) | Heap Sort | $O(n \log n)$ / $O(n \log n)$ | $O(1)$ |
+## Sorting Algorithms (Dual C11 & C++20)
+| Algorithm | C (C11) | C++ (C++20) | Time Complexity (Avg / Worst) | Space Complexity |
+|-----------|---------|-------------|-------------------------------|------------------|
+| Bubble Sort | [bubble_sort.c](bubble_sort.c) | [bubble_sort.cpp](bubble_sort.cpp) | $O(n^2)$ / $O(n^2)$ | $O(1)$ |
+| Selection Sort | [selection_sort.c](selection_sort.c) | [selection_sort.cpp](selection_sort.cpp) | $O(n^2)$ / $O(n^2)$ | $O(1)$ |
+| Insertion Sort | [insertion_sort.c](insertion_sort.c) | [insertion_sort.cpp](insertion_sort.cpp) | $O(n^2)$ / $O(n^2)$ | $O(1)$ |
+| Merge Sort | [merge_sort.c](merge_sort.c) | [merge_sort.cpp](merge_sort.cpp) | $O(n \log n)$ / $O(n \log n)$ | $O(n)$ |
+| Quick Sort | [quick_sort.c](quick_sort.c) | [quick_sort.cpp](quick_sort.cpp) | $O(n \log n)$ / $O(n^2)$ | $O(\log n)$ |
+| Heap Sort | [heap_sort.c](heap_sort.c) | [heap_sort.cpp](heap_sort.cpp) | $O(n \log n)$ / $O(n \log n)$ | $O(1)$ |
 
 ## Searching & Sorting Problems (C++20)
 | File | Problem Description / Pattern |
